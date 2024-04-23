@@ -54,7 +54,7 @@ main{
 
 
 .navbar-item:not(:first-child):hover{
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(222, 221, 221);
 }
 
 .navbar-item:not(:first-child):active {
