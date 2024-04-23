@@ -71,7 +71,7 @@ main{
 }
 
 .navbar-item:last-child a:hover {
-    background-color: rgb(207, 0, 0);
+    background-color: #da413e;
     color: white;
 }
 
