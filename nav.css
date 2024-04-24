@@ -8,13 +8,15 @@ body{
     margin: 0;
     padding: 0;
     color: black;
-    overflow-x: none;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
 main{
     margin-left: 15rem;
     padding: 1rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
 }
 
 .navbar{
