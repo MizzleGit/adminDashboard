@@ -1,0 +1,29 @@
+.logs-table table{
+    text-align: center;
+    border-radius: 5px;
+}
+
+.logs-table thead {
+    background-color: green !important;
+    color: white;
+}
+
+.logs-table tbody tr:nth-of-type(odd) {
+    background-color: rgb(202, 202, 202);
+}
+
+.logs-table tbody tr:nth-of-type(even) {
+    background-color: rgb(178, 219, 210);
+}
+
+
+.logs-table th{
+    min-width: 5rem;
+}
+
+.logs-table td{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+}
+
+
