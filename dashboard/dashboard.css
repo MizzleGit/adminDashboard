@@ -1,12 +1,21 @@
 
 main{
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
+main h1{
+    position: absolute;
+    top: 0;
+}
+
 .div-table{
+    margin-top: 5rem;
+    height: 80vh;
     border-radius: 10px;
     overflow-x: auto;
+    overflow-y: auto;
     scrollbar-width: thin;
 }
 
