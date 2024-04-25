@@ -1,29 +1,51 @@
-.logs-table table{
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logs-table{
+    background-color: rgb(253, 253, 253);
+    border: 3px solid rgb(222, 222, 222);
+    border-radius: 7px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 90vh;
+}
+
+.logs-table .table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.logs-table .table th{
+    font-size: 1.2rem;
+    color: rgb(62, 62, 62);
+}
+
+.logs-table .table td{
+    color: rgb(139, 139, 139);
     text-align: center;
-    border-radius: 5px;
-}
-
-.logs-table thead {
-    background-color: green !important;
-    color: white;
-}
-
-.logs-table tbody tr:nth-of-type(odd) {
-    background-color: rgb(202, 202, 202);
-}
-
-.logs-table tbody tr:nth-of-type(even) {
-    background-color: rgb(178, 219, 210);
-}
-
-
-.logs-table th{
+    font-weight: bold;
     min-width: 5rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
 }
 
-.logs-table td{
-    padding: 0 1rem;
-    font-size: 1.1rem;
+.logs-table .table tr{
+    height: 3.5rem;
 }
+
+.logs-table .table tr td:not(:last-child){
+    border-right: 3px solid rgb(222, 222, 222);
+    border-top: 3px solid rgb(222, 222, 222);
+}
+
+.logs-table .table tr td:last-child{
+    border-top: 3px solid rgb(222, 222, 222);
+}
+
+
 
 
