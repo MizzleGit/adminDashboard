@@ -6,6 +6,7 @@ main{
 
 .search{
     display: flex;
+    box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
 }
 
 .search-box{
@@ -15,7 +16,7 @@ main{
     height: 3rem;
     border: 1px solid rgb(164, 164, 164);
     /* border-radius: 3px; */
-    box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
+    /* box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224); */
     border-right: none;
 }
 
@@ -59,7 +60,7 @@ main{
     border: none;
     border: 1px solid #0f9660;
     border-left: none;
-    box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
+    /* box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224); */
 }
 
 #search-submit:active{
