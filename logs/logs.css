@@ -4,14 +4,20 @@ main{
     justify-content: center;
 }
 
+main h1{
+    position: absolute;
+    top: 0;
+}
+
 .logs-table{
+    margin-top: 5rem;
     background-color: rgb(253, 253, 253);
     border: 3px solid rgb(222, 222, 222);
     border-radius: 7px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
     scrollbar-width: thin;
-    height: 90vh;
+    height: 80vh;
 }
 
 .logs-table .table{
@@ -46,6 +52,12 @@ main{
     border-top: 3px solid rgb(222, 222, 222);
 }
 
+.accepted{
+    background-color: #0f9660 !important; 
+    color: white !important;
+}
 
-
-
+.rejected{
+    background-color: #da413e !important; 
+    color: white !important;
+}

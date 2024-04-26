@@ -31,17 +31,23 @@ main h1{
 .table th{
     height: 2rem;
     padding: 0 1rem;
+    color: white;
 }
 
 .table tr:nth-of-type(even){
     background-color: #e2e2e2;
 }
 
+.table tr{
+    height: 3rem;
+    font-weight: 500;
+    color: rgb(47, 54, 73);
+}
+
 .table td{
     padding: 0 1rem;
     text-align: center;
 }
-
 
 .icons{
     width: auto;
