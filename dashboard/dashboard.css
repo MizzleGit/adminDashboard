@@ -19,6 +19,10 @@ main h1{
     scrollbar-width: thin;
 }
 
+.div-table > table{
+    width: 100%;
+}
+
 .div-table table{
     border: 1px solid white;
 }
@@ -26,6 +30,8 @@ main h1{
 .table thead{
     background-color: #0f9660;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 .table th{

@@ -29,6 +29,8 @@ main h1{
 .table thead{
     background-color: #0f6d96;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 .table th{
