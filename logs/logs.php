@@ -34,7 +34,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="refusé">Refusé</td>
+                        <td class="Refusé">Refusé</td>
                         <td>Ahmed Abdelaziz | DS177410 |<br>ahmedabdelaziz@gmail.com | 06 12 51 12 36</td>
                         <td>2024-03-15 | 14:33:22</td>
                     </tr>

@@ -11,8 +11,6 @@ main h1{
 
 .logs-table{
     margin-top: 5rem;
-    background-color: rgb(253, 253, 253);
-    border: 3px solid rgb(222, 222, 222);
     border-radius: 7px;
     overflow-x: auto;
     overflow-y: auto;
@@ -27,6 +25,8 @@ main h1{
 }
 
 .logs-table .table{
+    background-color: rgb(253, 253, 253);
+    border: 3px solid rgb(222, 222, 222);
     border-collapse: collapse;
     width: 100%;
 }
@@ -58,12 +58,12 @@ main h1{
     border-top: 3px solid rgb(222, 222, 222);
 }
 
-.accepté{
+.Accepté{
     background-color: #0f9660 !important; 
     color: white !important;
 }
 
-.refusé{
+.Refusé{
     background-color: #da413e !important; 
     color: white !important;
 }

@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $inserted = $stmt->get_result();
 
         // LOGGIN SAFE
-        $accepedstr = "accepté";
+        $accepedstr = "Accepté";
         $currentTime = date("Y-m-d H-i-s");
         $info = $nom . " | " . $prenom . " | " . $cin;
 
