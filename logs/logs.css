@@ -58,12 +58,12 @@ main h1{
     border-top: 3px solid rgb(222, 222, 222);
 }
 
-.accepted{
+.accepté{
     background-color: #0f9660 !important; 
     color: white !important;
 }
 
-.rejected{
+.refusé{
     background-color: #da413e !important; 
     color: white !important;
 }

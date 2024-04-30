@@ -50,6 +50,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         $inserted = $stmt->get_result();
 
+        // LOGGIN SAFE
+        $accepedstr = "accepté";
+        $currentTime = date("Y-m-d H-i-s");
+        $info = $nom . " | " . $prenom . " | " . $cin;
+
+        $logsql = "INSERT INTO logs (action, info, time) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($logsql);
+        $stmt->bind_param("sss", $accepedstr, $info, $currentTime);
+        $stmt->execute();
+        $logged = $stmt->get_result();
+
+
         // Deletion SAFE
         $deletesql = "DELETE FROM inscri WHERE cin = ?";
 
@@ -64,10 +76,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $conn->query("COMMIT");
         sleep(1);
         header("location: /dashboard/dashboard.php");
+        $conn->close();
     }
     catch(Exception $ex){
         $conn->query("ROLLBACK");
         echo $ex;
+        $conn->close();
         exit();
     }
 
