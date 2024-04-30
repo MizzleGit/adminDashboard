@@ -12,9 +12,9 @@
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="navbar-item"><img src="../cri.png" alt="Logo of CRI"></li>
-            <li class="navbar-item"><a href="../index.php" class="nav-link">Dashboard</a></li>
+            <li class="navbar-item"><a href="../dashboard/dashboard.php" class="nav-link">Dashboard</a></li>
             <li class="navbar-item"><a href="../search/search.html" class="nav-link">Advanced Search</a></li>
-            <li class="navbar-item active"><a href="../current/current.html" class="nav-link">Current interns</a></li>
+            <li class="navbar-item active"><a href="../current/current.php" class="nav-link">Current interns</a></li>
             <li class="navbar-item"><a href="../logs/logs.html" class="nav-link">Read Logs</a></li>
             <li class="navbar-item"><a href="#" class="nav-link">Disconnect</a></li>
         </ul>
@@ -73,7 +73,7 @@
                             echo "<td>" . $row["email"] . "</td>";
                             echo "<td>" . $row["numero"] . "</td>";
                             echo "<td>" . $row["etudiant"] . "</td>";
-                            echo "<td>" . $row["date"]->format("Y-m-d H:i:s") . "</td>";
+                            echo "<td>" . date("Y-m-d", strtotime($row["debut"])) . "</td>";
                             echo "</tr>";
                         }
                     }

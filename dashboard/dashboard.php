@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../nav.css">
     <link rel="stylesheet" href="dashboard.css">
     <title>Dashboard</title>
@@ -14,7 +14,7 @@
             <li class="navbar-item"><img src="../cri.png" alt="Logo of CRI"></li>
             <li class="navbar-item active"><a href="../dashboard/dashboard.php" class="nav-link">Dashboard</a></li>
             <li class="navbar-item"><a href="../search/search.html" class="nav-link">Advanced Search</a></li>
-            <li class="navbar-item"><a href="../current/current.html" class="nav-link">Current interns</a></li>
+            <li class="navbar-item"><a href="../current/current.php" class="nav-link">Current interns</a></li>
             <li class="navbar-item"><a href="../logs/logs.html" class="nav-link">Read Logs</a></li>
             <li class="navbar-item"><a href="#" class="nav-link">Disconnect</a></li>
         </ul>
@@ -64,7 +64,7 @@
                     </tr>
                     <?php
 
-                    $conn = mysqli_connect("localhost", "root", "", "interns");
+                    $conn = mysqli_connect("localhost", "id22102457_root", "Nazih-abdelhak-2024", "id22102457_interndb");
                     $sql = "SELECT * FROM inscri";
 
                     $result = $conn->query($sql);
