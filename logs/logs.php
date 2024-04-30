@@ -39,7 +39,7 @@
                         <td>2024-03-15 | 14:33:22</td>
                     </tr>
                     <?php
-                    $conn = mysqli_connect("localhost", "id22102457_root", "Nazih-abdelhak-2024", "id22102457_interndb");
+                    require '../conn.php';
                     $sql = "SELECT * FROM logs";
 
                     $result = $conn->query($sql);

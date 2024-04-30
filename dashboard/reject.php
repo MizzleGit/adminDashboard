@@ -1,4 +1,6 @@
 <?php
+require '../conn.php';
+
 // Initialize id (CIN)
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -14,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Initializing
     $id = $_GET["id"];
-    $conn = mysqli_connect("localhost", "id22102457_root", "Nazih-abdelhak-2024", "id22102457_interndb");
     $conn->query("START TRANSACTION");
 
 

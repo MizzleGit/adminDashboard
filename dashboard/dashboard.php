@@ -63,8 +63,7 @@
                         <td><a class="link-rejected" href=""><img class="icons" src="rejected.svg" alt="rejected"></a></td>
                     </tr>
                     <?php
-
-                    $conn = mysqli_connect("localhost", "id22102457_root", "Nazih-abdelhak-2024", "id22102457_interndb");
+                    require '../conn.php';
                     $sql = "SELECT * FROM inscri";
 
                     $result = $conn->query($sql);
