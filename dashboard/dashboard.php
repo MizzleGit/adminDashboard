@@ -78,13 +78,13 @@
                             echo "<td>" . $row["email"] . "</td>";
                             echo "<td>" . $row["numero"] . "</td>";
                             echo "<td>" . $row["etudiant"] . "</td>";
-                            echo "<td>" . '<a class="link-accepted" href="/dashboard/accept.php?id=' . $row["cin"] . '"><img class="icons" src="accepted.svg" alt="accepted"></a>' . "</td>";
-                            echo "<td>" . '<a class="link-rejected" href="/dashboard/reject.php?id=' . $row["cin"] . '"><img class="icons" src="rejected.svg" alt="rejected"></a>' . "</td>";
+                            echo "<td>" . '<a class="link-accepted" href="./accept.php?id=' . $row["cin"] . '"><img class="icons" src="accepted.svg" alt="accepted"></a>' . "</td>";
+                            echo "<td>" . '<a class="link-rejected" href="./reject.php?id=' . $row["cin"] . '"><img class="icons" src="rejected.svg" alt="rejected"></a>' . "</td>";
                             echo "</tr>";
                         }
                     }
                     else{
-                        echo "ERROR";
+                        // echo "ERROR";
                     }
 
                     $conn->close();
