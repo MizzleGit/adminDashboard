@@ -1,0 +1,17 @@
+// Site
+url: https://cristage.000webhostapp.com/
+
+// DB
+url: https://databases.000webhost.com/
+name: id22102457_root
+
+
+// Random additions
+
+
+INSERT INTO inscri (nom, prenom, cin, email, numero, etudiant, urlaccepter, urlrefuser) VALUES
+('last','ahmed','SD062001','ahmed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('postnom', 'mohammed', 'BD019002', 'mohammed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('nom', 'youssef', 'DD019303', 'youssef@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('lastlast', 'salah', 'SM094624', 'salah@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('lastname', 'ilyas', 'KJ194105', 'ilyas@mail.com', '+21265511542211', 'Oui', 'empty', 'empty');
