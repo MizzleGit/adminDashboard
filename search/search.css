@@ -66,3 +66,22 @@ main{
 #search-submit:active{
     filter: brightness(1.2);
 }
+
+@media screen and (orientation:portrait){
+    main{
+        align-items: flex-start;
+    }
+    .search{
+        width: 95vw;
+    }
+
+    .search-box input{
+        width: 60vw;
+    }
+    .search-box .search-icon{
+        width: 10vw;
+    }
+    #search-submit{
+        width: 25vw;
+    }
+}

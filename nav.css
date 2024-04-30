@@ -4,6 +4,10 @@
     scrollbar-width: thin;
 }
 
+.mobile-icons{
+    display: none;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -92,4 +96,47 @@ main{
 
 .active{
     background-color: rgb(222, 221, 221);
+}
+
+@media screen and (orientation:portrait){
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    main{
+        margin-left: 0;
+        padding: 1rem 1rem 0 1rem;
+        margin-bottom: 20vw;
+        box-sizing: border-box;
+        overflow: hidden;
+        height: calc(100vh - 20vw);
+    }
+    .navbar{
+        bottom: 0;
+        height: 20vw;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        flex-grow: 1;
+    }
+    .navbar-item:first-child{
+        display: none;
+    }
+    .navbar-item:last-child{
+        border: none;
+        margin-top: none;
+    }
+    .navbar-item{
+        width: 20%;
+        height: 100%;
+    }
+    .mobile-icons{
+        display: flex;
+    }
+    .navbar-nav li a span{
+        display: none;
+    }
 }
