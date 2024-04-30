@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Initializing
     $id = $_GET["id"];
     $conn = mysqli_connect("localhost", "id22102457_root", "Nazih-abdelhak-2024", "id22102457_interndb");
+    $conn->query("START TRANSACTION");
 
 
     try{
@@ -58,11 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         $deleted = $stmt->get_result();
 
+
         // Finalization
+        $conn->query("COMMIT");
         sleep(1);
         header("location: /dashboard/dashboard.php");
     }
     catch(Exception $ex){
+        $conn->query("ROLLBACK");
         echo $ex;
         exit();
     }
