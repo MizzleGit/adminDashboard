@@ -1,8 +1,9 @@
 
 main{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    overflow: none;
 }
 
 main h1{
@@ -12,7 +13,7 @@ main h1{
 
 .div-table{
     margin-top: 5rem;
-    height: 80vh;
+    max-height: 80vh;
     border-radius: 10px;
     overflow-x: auto;
     overflow-y: auto;
@@ -62,6 +63,6 @@ main h1{
 
 @media screen and (orientation:portrait) {
     h1{
-        margin-bottom: 2rem;
+        margin-bottom: 20px;
     }    
 }
