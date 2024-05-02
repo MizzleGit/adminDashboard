@@ -75,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         // Finalization
         $conn->query("COMMIT");
-        sleep(1);
         header("location: /dashboard/dashboard.php");
         $conn->close();
     }

@@ -33,23 +33,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="Refusé">Refusé</td>
-                        <td>Ahmed Abdelaziz | DS177410 |<br>ahmedabdelaziz@gmail.com | 06 12 51 12 36</td>
-                        <td>2024-03-15 | 14:33:22</td>
-                    </tr>
                     <?php
                     require '../conn.php';
                     $sql = "SELECT * FROM logs";
-
                     $result = $conn->query($sql);
 
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td class='" . $row["action"] . "'>" . $row["action"] . "</td>";
-                        echo "<td>" . $row["info"] . "</td>";
-                        echo "<td>" . date("Y-m-d H:i:s", strtotime($row["time"])) . "</td>";
-                        echo "</tr>";
+                    if($result->num_rows>0){
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td class='" . $row["action"] . "'>" . $row["action"] . "</td>";
+                            echo "<td>" . $row["info"] . "</td>";
+                            echo "<td>" . date("Y-m-d H:i:s", strtotime($row["time"])) . "</td>";
+                            echo "</tr>";
+                        }
+                    }
+                    else{
+                        echo "<td colspan='3'>Historique est vide</td>";
                     }
                     $conn->close();
 

@@ -52,16 +52,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Abdelhak</td>
-                        <td>Abdelaziz</td>
-                        <td>SH182976</td>
-                        <td>emailemail@gmail.com</td>
-                        <td>+212672729112</td>
-                        <td>Oui</td>
-                        <td><a class="link-accepted" href=""><img class="icons" src="accepted.svg" alt="accepted"></a></td>
-                        <td><a class="link-rejected" href=""><img class="icons" src="rejected.svg" alt="rejected"></a></td>
-                    </tr>
                     <?php
                     require '../conn.php';
                     $sql = "SELECT * FROM inscri";
@@ -83,7 +73,7 @@
                         }
                     }
                     else{
-                        // echo "ERROR";
+                        echo "<td colspan='8'>Vide</td>";
                     }
 
                     $conn->close();

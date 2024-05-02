@@ -49,15 +49,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Abdelhak</td>
-                        <td>Abdelaziz</td>
-                        <td>SH182976</td>
-                        <td>baityounes@gmail.com</td>
-                        <td>+212672729112</td>
-                        <td>Oui</td>
-                        <td>2024-6-1</td>
-                    </tr>
                     <?php
                     require '../conn.php';
                     $sql = "SELECT * FROM actuels";
@@ -78,7 +69,7 @@
                         }
                     }
                     else{
-                        // echo "ERROR";
+                        echo "<td colspan='7'>Pas de stagiaires actuels</td>";
                     }
 
                     $conn->close();
