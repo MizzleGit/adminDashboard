@@ -14,4 +14,14 @@ INSERT INTO inscri (nom, prenom, cin, email, numero, etudiant, urlaccepter, urlr
 ('postnom', 'mohammed', 'BD019002', 'mohammed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
 ('nom', 'youssef', 'DD019303', 'youssef@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
 ('lastlast', 'salah', 'SM094624', 'salah@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
-('lastname', 'ilyas', 'KJ194105', 'ilyas@mail.com', '+21265511542211', 'Oui', 'empty', 'empty');
+('lastname', 'ilyas', 'KJ194105', 'ilyas@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('tad','ahmed','SD999999','ahmed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('nad', 'mohammed', 'BD999998', 'mohammed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('fad', 'youssef', 'DD999997', 'youssef@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('bad', 'salah', 'SM999996', 'salah@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('kad', 'ilyas', 'KJ999995', 'ilyas@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('dodo','ahmed','SD123456','ahmed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('mohammed', 'mohammed', 'BD000001', 'mohammed@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('asdf', 'youssef', 'DD000002', 'youssef@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('lastty', 'salah', 'SM000003', 'salah@mail.com', '+21265511542211', 'Oui', 'empty', 'empty'),
+('miz', 'ilyas', 'KJ000004', 'ilyas@mail.com', '+21265511542211', 'Oui', 'empty', 'empty');
