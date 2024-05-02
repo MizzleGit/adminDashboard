@@ -51,7 +51,6 @@
                         echo "<td colspan='3'>Historique est vide</td>";
                     }
                     $conn->close();
-
                     ?>
                 </tbody>
             </table>

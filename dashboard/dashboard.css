@@ -8,6 +8,7 @@ main{
 
 main h1{
     position: absolute;
+    font-size: 20px;
     top: 0;
 }
 

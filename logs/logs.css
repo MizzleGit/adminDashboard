@@ -6,6 +6,7 @@ main{
 
 main h1{
     position: absolute;
+    font-size: 20px;
     top: 0;
 }
 
@@ -32,6 +33,7 @@ main h1{
 }
 
 .logs-table .table th{
+    padding: 0 1rem;
     font-size: 1.2rem;
     color: rgb(62, 62, 62);
 }
