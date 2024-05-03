@@ -59,6 +59,19 @@ main h1{
     height: 1rem;
 }
 
+.back-next{
+    width: 1rem;
+    height: auto;
+}
+
+.next-page{
+    float: right;
+}
+
+.prev-page{
+    float: left;
+}
+
 @media screen and (orientation:portrait) {
     main{
         align-items: flex-start;

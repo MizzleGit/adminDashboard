@@ -67,3 +67,16 @@ main h1{
         margin-bottom: 20px;
     }    
 }
+
+.back-next{
+    width: 1rem;
+    height: auto;
+}
+
+.next-page{
+    float: right;
+}
+
+.prev-page{
+    float: left;
+}

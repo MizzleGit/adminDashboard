@@ -54,12 +54,29 @@
                 <tbody>
                     <?php
                     require '../conn.php';
-                    $sql = "SELECT * FROM inscri";
 
-                    $result = $conn->query($sql);
+                    // If page invalid set to 1
+                    if (!isset($_GET["page"]) || empty($_GET["page"]) || $_GET["page"] <= 1) {
+                        $page = 1;
+                    }
+                    // If page is valid set to current page
+                    else{
+                        $page = $_GET["page"];
+                    }
+
+                    $offset = $page * 5 - 5;
+
+                    // Query to retrieve 5 elements from database
+                    $sql = "SELECT * FROM inscri LIMIT 5 OFFSET ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $offset);
+                    $stmt->execute();
+                    $result = $stmt->get_result();                    
 
                     if ($result->num_rows > 0){
-                        while ($row = $result->fetch_assoc()){
+                        $rows = $result->fetch_all(MYSQLI_ASSOC);
+                        $rows = array_reverse($rows);
+                        foreach ($rows as $row){
                             echo "<tr>";
                             echo "<td>" . $row["nom"] . "</td>";
                             echo "<td>" . $row["prenom"] . "</td>";
@@ -71,9 +88,32 @@
                             echo "<td>" . '<a class="link-rejected" href="./reject.php?id=' . $row["cin"] . '"><img class="icons" src="rejected.svg" alt="rejected"></a>' . "</td>";
                             echo "</tr>";
                         }
+                        // Without this, we'd get ?page=0
+                        if ($page - 1 <= 1){
+                            $back = 1;
+                        }
+                        else{
+                            $back = $page - 1;
+                        }
+                        $next = $page + 1;
+                        // Back and Next links
+                        echo "<tr>";
+                        echo "<td colspan='8'> <a class='prev-page' href=?" . "page=$back" . '><svg class="back-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>';
+                        echo "<a class='next-page' href=?page=$next" . '><svg class="back-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>';
+                        echo "</tr>";                        
                     }
                     else{
-                        echo "<td colspan='8'>Vide</td>";
+                        // Without this page would immediately go back to 0 when clicked
+                        if ($page - 1 <= 1) {
+                            $back = 1;
+                        } else {
+                            $back = $page - 1;
+                        }
+                        // Print "Pas d'inscriptions!" And have arrow on the left for back
+                        echo "<tr>";
+                        echo "<td colspan='8'><a class='prev-page' href=?" . "page=$back" . '><svg class="back-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>';
+                        echo "Pas d'inscriptions!</td>";
+                        echo "</tr>";                        
                     }
 
                     $conn->close();
