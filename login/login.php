@@ -1,5 +1,8 @@
 <?php
-require './validate.php';
+require '../config/config.php';
+require '../config/validate.php';
+$conn = connect();
+
 if (isset($_POST["submit"])) {
     $response = loginAdmin($_POST["email"], $_POST["password"]);
 }

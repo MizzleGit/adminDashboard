@@ -44,7 +44,9 @@
                 </thead>
                 <tbody>
                     <?php
-                    require '../conn.php';
+                    require '../config/config.php';
+                    require '../config/validate.php';
+                    $conn = connect();
 
                     // If page invalid set to 1
                     if (!isset($_GET["page"]) || empty($_GET["page"]) || $_GET["page"] <= 1) {

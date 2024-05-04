@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="dashboard/dashboard.php">Dashboard</a>
+        <a href="login/login.php">Log in</a>
     </div>
 </body>
 </html>

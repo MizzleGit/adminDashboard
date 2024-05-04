@@ -1,5 +1,7 @@
 <?php
-require '../conn.php';
+require '../config/config.php';
+require '../config/validate.php';
+$conn = connect();
 
 // Initialize id (CIN)
 error_reporting(E_ALL);

@@ -1,6 +1,5 @@
 <?php
-
-require './config.php';
+require 'config.php';
 
 function connect(){
     $mysqli = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
@@ -44,9 +43,7 @@ function loginAdmin($email, $pass){
         return "Mot de passe n'est pas valide!";
     }
     else{
-        session_start();
         $_SESSION["email"] = $email;
         header("location: ../dashboard/dashboard.php");
     }
 }
-?>
