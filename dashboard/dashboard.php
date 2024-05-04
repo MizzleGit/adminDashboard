@@ -1,6 +1,5 @@
 <?php
 require '../config/config.php';
-require '../config/validate.php';
 if(!isset($_SESSION["email"])){
     header("location: ../login/login.php");
 }

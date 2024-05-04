@@ -1,3 +1,9 @@
+<?php
+require '../config/config.php';
+if(!isset($_SESSION["email"])){
+    header("location: ../login/login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
