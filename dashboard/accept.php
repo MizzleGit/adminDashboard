@@ -7,6 +7,8 @@ $conn = connect();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $id = "";
+$debut = "";
+$fin = "";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -18,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Initializing
     $id = $_GET["id"];
+    $debut = $_GET["debut"];
+    $fin = $_GET["fin"];
     $conn->query("START TRANSACTION");
 
 
@@ -41,14 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $email = $row['email'];
         $numero = $row['numero'];
         $etudiant = $row['etudiant'];
-        $currentDate = date("Y-m-d");
 
 
         // INSERTION SAFE
-        $insertsql = "INSERT INTO actuels (nom, prenom, cin, email, numero, etudiant, debut) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $insertsql = "INSERT INTO actuels (nom, prenom, cin, email, numero, etudiant, debut, fin) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($insertsql);
-        $stmt->bind_param("sssssss", $nom, $prenom, $cin, $email, $numero, $etudiant, $currentDate);
+        $stmt->bind_param("ssssssss", $nom, $prenom, $cin, $email, $numero, $etudiant, $debut, $fin);
         $stmt->execute();
 
         $inserted = $stmt->get_result();
