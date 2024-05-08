@@ -50,6 +50,12 @@ if(!isset($_SESSION["email"])){
                             Etudiant
                         </th>
                         <th>
+                            Etablissement
+                        </th>
+                        <th>
+                            Theme
+                        </th>
+                        <th>
                             Accepter
                         </th>
                         <th>
@@ -92,6 +98,8 @@ if(!isset($_SESSION["email"])){
                             echo "<td>" . $row["email"] . "</td>";
                             echo "<td>" . $row["numero"] . "</td>";
                             echo "<td>" . $row["etudiant"] . "</td>";
+                            echo "<td>" . $row["etablissement"] . "</td>";
+                            echo "<td>" . $row["theme"] . "</td>";
                             echo "<td>" . '<a class="link-accepted" href="./dateselect.php?id=' . $row["cin"] . '"><img class="icons" src="accepted.svg" alt="accepted"></a>' . "</td>";
                             echo "<td>" . '<a class="link-rejected" href="./reject.php?id=' . $row["cin"] . '"><img class="icons" src="rejected.svg" alt="rejected"></a>' . "</td>";
                             echo "</tr>";
