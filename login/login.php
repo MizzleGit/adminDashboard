@@ -15,30 +15,32 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <title>Connexion</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <title>Admin</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="login-div">
-            <form action="" method="POST">
-                <div class="email-div">
-                    <label for="email">E-Mail</label>
-                    <input type="email" name="email" id="email" value=<?php echo @$_POST["email"]; ?>>
-                </div>
-                <div class="pass-div">
-                    <br><label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password" value=<?php echo @$_POST["password"]; ?>>
-                </div>
-                <div class="submit-div">
-                    <input id="submit" name="submit" type="submit" value="Connexion">
-                </div>
-            </form>
-            <div class="error-div">
-                <?php echo @$response; ?>
-            </div>
+    <form action="" method="POST">
+        <div class="h1-div">
+            <h1>Admin</h1>
         </div>
-    </div>
+        <div class="email-div">
+            <input type="email" name="email" id="email" placeholder="E-Mail" value=<?php echo @$_POST["email"]; ?>>
+        </div>
+        <div class="password-div">
+            <input type="password" name="password" id="password" placeholder="Mot de passe" value=<?php echo @$_POST["password"]; ?>>
+        </div>
+        <div class="submit-div">
+            <input name="submit" type="submit" value="Connexion">
+        </div>
+        <div class="error-div">
+            <?php
+            if (!empty($response)) {
+                echo "❌" . @$response;
+            }
+            ?>
+        </div>
+    </form>
 </body>
 
 </html>

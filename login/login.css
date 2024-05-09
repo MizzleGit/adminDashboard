@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 :root{
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body{
@@ -13,59 +11,68 @@ html, body{
     overflow: hidden;
 }
 
-.container{
+body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: lightgray;
+    background-image: url(CRI-by-miz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
 }
 
-.login-div{
+form{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 15rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0px 2rem;
+}
+
+div{
+    margin: 1rem 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    min-width: 20rem;
-    border: 1px solid black;
-    padding: 1rem 0.5rem;
 }
 
-.email-div input{
-    float: right;
-    min-width: 12rem;
+h1{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+input{
+    background: none;
     outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    height: 2rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 1);
+}
+
+input::placeholder{
+    color: white;
+}
+
+.submit-div input{
     border: none;
-    border-radius: 2px;
-    height: 1.2rem;
+    background-color: #0f9660;
+    box-shadow: 0 3px 0 0 #09603d;
+    padding: 0;
 }
 
-.pass-div input {
-    float: right;
-    min-width: 12rem;
-    outline: none;
-    border: none;
-    border-radius: 2px;
-    height: 1.2rem;
-}
-
-.submit-div{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#submit{
-    background-color: white;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    height: 1.5rem;
-    width: 6rem;
-    box-shadow: 0 3px 0 0 rgb(151, 151, 151);
-}
-
-#submit:active{
-    transform: translateY(3px);
+.submit-div input:active {
     box-shadow: none;
+    transform: translateY(3px);
+}
+
+.error-div{
+    margin: 0 0 1rem 0;
+    color: white;
+    text-align: center;
 }
