@@ -1,0 +1,412 @@
+
+
+/* Main body */
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    background-image: url(CRI-by-miz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+
+
+
+
+/* Login section */
+
+.login-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    height: 100vh;
+    width: 50vw;
+}
+
+/* Login form */
+#login-form{
+    opacity: 0;
+    height: 210px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+}
+
+#login-form h1{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+
+.login-form-input{
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.login-form-input input{
+    padding: 0 10px;
+}
+
+/* Login form email */
+.login-form-email input{
+    height: 36px;
+    width: 250px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+}
+
+.login-form-email input::placeholder{
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Login form password */
+.login-form-pass input{
+    height: 36px;
+    width: 250px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+}
+.login-form-pass input::placeholder{
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Login form submit button */
+.login-form-submit input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 5px 0 0 #09603d;
+    background-color: #0f9660;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.login-form-submit input:active{
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+
+/* Illustration when SIGNUP is selected */
+#signup-selected-left-div{
+    opacity: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    position: absolute;
+    left: -50vw;
+    background-image: url(cri-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+#login-back{
+    display: none;
+    position: absolute;
+    left: 1vw;
+}
+
+
+/* End of login section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sign up section */
+.signup-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 100vh;
+    width: 50vw;
+}
+
+#signup-form{
+    opacity: 0;
+    height: 480px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+}
+
+#signup-form form{
+    width: 100%;
+}
+
+
+#signup-form h1{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+
+.signup-form-input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#signup-form .signup-visible-inputs{
+    padding: 10px;
+    width: 90%;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+}
+
+#signup-form .signup-visible-inputs::placeholder{
+    color: white;
+}
+
+.signup-submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-submit-button{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    background-color: #0f9660;
+    box-shadow: 0 5px 0 0 #09603d;
+    height: 36px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 30px;
+    color: white;
+}
+
+.signup-submit-button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+#signup-back {
+    display: none;
+    position: absolute;
+    left: 1vw;
+}
+
+#theme{
+    outline: none;
+    color: white;
+    border: 1px solid white;
+    background: none;
+    text-align: center;
+    width: 90%;
+    height: 36px;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+#theme:active, #theme:hover, #theme:focus, #theme:focus-visible{
+    background-color: white;
+    color: black;
+}
+
+/* Illustration when LOGIN is selected */
+#login-selected-right-div{
+    opacity: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    position: absolute;
+    right: -50vw;
+    background-image: url(cri-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom button code */
+
+
+.back-button {
+    width: 20px;
+    height: 60px;
+    font-size: larger;
+    background-color: #da413e;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
+}
+
+
+
+.custom-button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 30px; /* was 4px */
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 48px;
+  width: 270px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.custom-button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.custom-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media screen and (max-width:705px){
+    html, body{
+        overflow: hidden;
+        height: 100svh;
+        width: 100vw;
+    }
+    body{
+        flex-direction: column;
+    }
+    .signup-right{
+        height: 50vh;
+        width: 100vw;
+        order: 1;
+    }
+    .login-left{
+        height: 50vh;
+        width: 100vw;
+        order: 2;
+    }
+    .login-selected-right-div{
+        display: none;
+    }
+    .signup-selected-left-div{
+        display: none;
+    }
+    #login-form{
+        width: 80vw;
+    }
+    #signup-form{
+        width: 80vw;
+    }
+}
