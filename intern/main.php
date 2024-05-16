@@ -1,9 +1,15 @@
 <?php
-// require "../config/validate.php";
+require "../config/validate.php";
 
-// if (isset($_POST("login"))) {
-//     $loginresponse = loginUser($_POST["loginemail"], $_POST["loginpassword"]);
-// }
+if (isset($_POST["login"])) {
+    $loginResponse = loginUser($_POST["loginemail"], $_POST["loginpassword"]);
+    echo "<script>alert('$loginResponse');</script>";
+}
+
+if (isset($_POST["signup"])) {
+    $signupResponse = signupUser($_POST["nom"], $_POST["prenom"], $_POST["cin"], $_POST["email"], $_POST["numero"], $_POST["etablissement"], $_POST["theme"], $_POST["password"]);
+    echo "<script>alert('$signupResponse');</script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,10 +89,10 @@
                 <div class="signup-form-input">
                     <select name="theme" id="theme" required>
                         <option value="" disabled selected>Choisir Theme</option>
-                        <option value="dev_mobile">Développement d'applications mobiles</option>
-                        <option value="analyse_donnee">Analyse de données et visualisation</option>
-                        <option value="sys_info">Systèmes d'information géographique</option>
-                        <option value="marketing">Étude de marché et marketing digital</option>
+                        <option value="Développement d'applications mobiles">Développement d'applications mobiles</option>
+                        <option value="Analyse de données et visualisation">Analyse de données et visualisation</option>
+                        <option value="Développement de site Web">Développement de site Web</option>
+                        <option value="Étude de marché et marketing digital">Étude de marché et marketing digital</option>
                     </select>
                 </div>
 

@@ -1,3 +1,6 @@
+<?php
+require "../config/config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    Demo
+    Demo <?php echo $_SESSION["email"];?>
 </body>
 </html>

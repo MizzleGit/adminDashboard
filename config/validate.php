@@ -25,7 +25,7 @@ function loginAdmin($email, $pass){
     }
 
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+    // $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
     $sql = "SELECT email, password FROM admins WHERE email = ?";
 
@@ -58,7 +58,7 @@ function loginUser($email, $pass){
     }
 
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+    // $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
     $sql = "SELECT email, password FROM users WHERE email = ?";
 
@@ -87,9 +87,11 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
     $cin = trim($cin);
     $email = trim($email);
     $numero = trim($numero);
+    $etudiant = "Oui";
+    if (!isset($etablissement) || empty($etablissement)){
+        $etudiant = "Non";
+    }
     $etablissement = trim($etablissement);
-    $theme = trim($theme);
-
 
     $inscrisql = "SELECT 1 FROM inscri WHERE CIN = ?";
 
@@ -99,7 +101,8 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
 
     $result = $stmt->get_result();
     $data = $result->fetch_assoc();
-    if ($data == NULL){
+    if ($data != NULL){
+        // echo "<script>alert('Vous etes deja inscri!')</script>";
         return "Deja inscri";
     }
 
@@ -113,17 +116,30 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
 
     $result = $stmt->get_result();
     $data = $result->fetch_assoc();
-    if ($data == NULL) {
-        echo "<script>alert('Vous etes un stagiaire actuel')</script>";
+    if ($data != NULL) {
+        // echo "<script>alert('Vous etes un stagiaire actuel!')</script>";
         return "Vous etes un stagiaire actuel";
     }
 
+    $signedupsql = "SELECT email, password FROM users WHERE email = ?";
+
+    $stmt = $conn->prepare($signedupsql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
+    if ($data != NULL){
+        if ($data["password"] != $password){
+            return "Le mot de passe n'est pas correcte! Entrez votre ancien mot de passe!";
+        }
+    }
 
 
     $insertsql = "INSERT INTO inscri (nom, prenom, cin, email, numero, etudiant, etablissement, theme) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($insertsql);
-    $stmt->bind_param("ssssssss", $nom, $prenom, $cin, $email, $numero, $etablissement, $theme);
+    $stmt->bind_param("ssssssss", $nom, $prenom, $cin, $email, $numero, $etudiant, $etablissement, $theme);
     $stmt->execute();
 
     $insertsql = "INSERT INTO info (nom, prenom, cin, numero, email) VALUES (?, ?, ?, ?, ?)";
@@ -132,7 +148,7 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
     $stmt->bind_param("sssss", $nom, $prenom, $cin, $numero, $email);
     $stmt->execute();
 
-    $info = $nom . $prenom . $cin;
+    $info = $nom . " | " . $prenom . " | " . $cin;
     $currentTime = date("Y-m-d H-i-s");
     $action = "Inscri";
     $logsql = "INSERT INTO logs (action, info, time) VALUES (?, ?, ?)";
@@ -143,9 +159,10 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
 
     $insertsql = "INSERT INTO users (email, password) VALUES (?, ?)";
 
-    $stmt = $conn->prepare($inscrisql);
+    $stmt = $conn->prepare($insertsql);
     $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
 
-
+    // echo "<script>alert('Inscription complet!')</script>";
+    return "Inscription complet!";
 }
