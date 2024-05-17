@@ -70,7 +70,7 @@ if(!isset($_SESSION["email"])){
                         foreach ($rows as $row) {
                             echo "<tr>";
                             echo "<td class='" . $row["action"] . "'>" . $row["action"] . "</td>";
-                            echo "<td>" . $row["info"] . "</td>";
+                            echo "<td>" . $row["nom"] . " | " . $row["cin"] . "</td>";
                             echo "<td>" . date("Y-m-d H:i:s", strtotime($row["time"])) . "</td>";
                             echo "</tr>";
                         }

@@ -59,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // LOGGIN SAFE
         $accepedstr = "Accepté";
         $currentTime = date("Y-m-d H-i-s");
-        $info = $nom . " | " . $prenom . " | " . $cin;
+        $fullname = $nom . " " . $prenom;
 
-        $logsql = "INSERT INTO logs (action, info, time) VALUES (?, ?, ?)";
+        $logsql = "INSERT INTO logs (action, nom, cin, time) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($logsql);
-        $stmt->bind_param("sss", $accepedstr, $info, $currentTime);
+        $stmt->bind_param("ssss", $accepedstr, $fullname, $cin, $currentTime);
         $stmt->execute();
         $logged = $stmt->get_result();
 

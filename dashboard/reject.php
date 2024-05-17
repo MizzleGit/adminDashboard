@@ -41,11 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // LOGGIN SAFE
         $rejectedstr = "Refusé";
         $currentTime = date("Y-m-d H-i-s");
-        $info = $nom . " | " . $prenom . " | " . $cin;
+        $fullname = $nom . " " . $prenom;
 
-        $logsql = "INSERT INTO logs (action, info, time) VALUES (?, ?, ?)";
+        $logsql = "INSERT INTO logs (action, nom, cin, time) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($logsql);
-        $stmt->bind_param("sss", $rejectedstr, $info, $currentTime);
+        $stmt->bind_param("ssss", $rejectedstr, $fullname, $cin, $currentTime);
         $stmt->execute();
         $logged = $stmt->get_result();
 

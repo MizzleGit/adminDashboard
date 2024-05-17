@@ -148,13 +148,13 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
     $stmt->bind_param("sssss", $nom, $prenom, $cin, $numero, $email);
     $stmt->execute();
 
-    $info = $nom . " | " . $prenom . " | " . $cin;
+    $fullname = $nom . " " . $prenom;
     $currentTime = date("Y-m-d H-i-s");
     $action = "Inscri";
-    $logsql = "INSERT INTO logs (action, info, time) VALUES (?, ?, ?)";
+    $logsql = "INSERT INTO logs (action, nom, cin, time) VALUES (?, ?, ?, ?)";
 
     $stmt = $conn->prepare($logsql);
-    $stmt->bind_param("sss", $action, $info, $currentTime);
+    $stmt->bind_param("ssss", $action, $fullname, $cin, $currentTime);
     $stmt->execute();
 
     $insertsql = "INSERT INTO users (email, password) VALUES (?, ?)";
