@@ -57,7 +57,7 @@ if(!isset($_SESSION["email"])){
                     $offset = $page * 5 - 5;
 
                     // Query to retrieve 5 elements from database
-                    $sql = "SELECT * FROM logs LIMIT 5 OFFSET ?";
+                    $sql = "SELECT * FROM logs ORDER BY id DESC LIMIT 5 OFFSET ?";
                     $stmt = $conn->prepare($sql);
                     $stmt->bind_param("s", $offset);
                     $stmt->execute();
@@ -66,7 +66,6 @@ if(!isset($_SESSION["email"])){
                     // If there are rows in that current page
                     if ($result->num_rows > 0) {
                         $rows = $result->fetch_all(MYSQLI_ASSOC);
-                        $rows = array_reverse($rows); // Sort it so newest = highest
                         foreach ($rows as $row) {
                             echo "<tr>";
                             echo "<td class='" . $row["action"] . "'>" . $row["action"] . "</td>";

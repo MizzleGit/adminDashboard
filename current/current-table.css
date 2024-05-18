@@ -72,6 +72,11 @@ main h1{
     float: left;
 }
 
+svg{
+    width: auto;
+    height: 1rem;
+}
+
 @media screen and (orientation:portrait) {
     main{
         align-items: flex-start;

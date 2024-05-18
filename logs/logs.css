@@ -69,6 +69,14 @@ main h1{
     background-color: #da413e !important; 
     color: white !important;
 }
+.Completé{
+    background-color: darkslategray;
+    color: white !important;
+}
+.Inscrit{
+    background-color: rgb(255, 234, 0);
+    color: rgb(0, 0, 0) !important;
+}
 
 svg{
     width: 1rem;

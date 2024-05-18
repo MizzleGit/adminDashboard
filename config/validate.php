@@ -150,7 +150,7 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
 
     $fullname = $nom . " " . $prenom;
     $currentTime = date("Y-m-d H-i-s");
-    $action = "Inscri";
+    $action = "Inscrit";
     $logsql = "INSERT INTO logs (action, nom, cin, time) VALUES (?, ?, ?, ?)";
 
     $stmt = $conn->prepare($logsql);
