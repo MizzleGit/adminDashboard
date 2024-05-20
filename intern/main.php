@@ -79,7 +79,7 @@ if (isset($_POST["signup"])) {
                 </div>
 
                 <div class="signup-form-input signup-form-etablissement">
-                    <input class="signup-visible-inputs" type="text" name="etablissement" id="etablissement" placeholder="Établissement" required>
+                    <input class="signup-visible-inputs" type="text" name="etablissement" id="etablissement" placeholder="Établissement (Laisser vide sinon)">
                 </div>
 
                 <div class="signup-form-input signup-form-password">
