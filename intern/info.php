@@ -138,26 +138,28 @@ $numero = $data["numero"];
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Inscrit</td>
-                        <td>2024-12-4 23:12:53</td>
-                    </tr>
-                    <tr>
-                        <td>Refusé</td>
-                        <td>2024-12-4 23:12:53</td>
-                    </tr>
-                    <tr>
-                        <td>Inscrit</td>
-                        <td>2024-12-4 23:12:53</td>
-                    </tr>
-                    <tr>
-                        <td>Accepté</td>
-                        <td>2024-12-4 23:12:53</td>
-                    </tr>
-                    <tr>
-                        <td>Inscrit</td>
-                        <td>2024-12-4 23:12:53</td>
-                    </tr>
+                    <?php
+
+                    $logsql = "SELECT * FROM logs WHERE cin = ? ORDER BY id DESC";
+                    $stmt = $conn->prepare($logsql);
+                    $stmt->bind_param("s", $cin);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $data = $result->fetch_all(MYSQLI_ASSOC);
+                    if ($data == null){
+                        echo "<tr>";
+                        echo "<td colspan='2'>Pas d'historique!</td>";
+                        echo "</tr>";
+                    }
+                    else{
+                        foreach ($data as $row){
+                            echo "<tr>";
+                            echo '<td>' . $row["action"] . '</td>';
+                            echo '<td>' . $row["time"] . '</td>';
+                            echo "</tr>";
+                        }
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
