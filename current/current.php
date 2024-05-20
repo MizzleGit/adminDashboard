@@ -80,7 +80,7 @@ if (!isset($_SESSION["email"])) {
                     $offset = $page * 5 - 5;
 
                     // Query to retrieve 5 elements from database
-                    $sql = "SELECT * FROM actuels LIMIT 5 OFFSET ?";
+                    $sql = "SELECT * FROM actuels ORDER BY id DESC LIMIT 5 OFFSET ?";
                     $stmt = $conn->prepare($sql);
                     $stmt->bind_param("s", $offset);
                     $stmt->execute();
@@ -88,7 +88,6 @@ if (!isset($_SESSION["email"])) {
 
                     if ($result->num_rows > 0) {
                         $rows = $result->fetch_all(MYSQLI_ASSOC);
-                        $rows = array_reverse($rows);
                         foreach ($rows as $row) {
                             echo "<tr>";
                             echo "<td>" . $row["nom"] . "</td>";
@@ -99,7 +98,7 @@ if (!isset($_SESSION["email"])) {
                             echo "<td>" . $row["etudiant"] . "</td>";
                             echo "<td>" . $row["debut"] . "</td>";
                             echo "<td>" . $row["fin"] . "</td>";
-                            echo "<td>" . '<a class="link-attestation" href="./attestation.php?id=' . $row["cin"] . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#ff464a" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a>' . "</td>";
+                            echo "<td>" . '<a class="link-attestation" href="./attestation.php?id=' . $row["cin"] . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#59f07b" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a>' . "</td>";
                             echo "</tr>";
                         }
                         // Without this, we'd get ?page=0
