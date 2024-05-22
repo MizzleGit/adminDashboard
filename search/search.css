@@ -1,87 +1,218 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
 main{
+    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .search{
     display: flex;
-    box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
-}
-
-.search-box{
-    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 30rem;
-    height: 3rem;
-    border: 1px solid rgb(164, 164, 164);
-    /* border-radius: 3px; */
-    /* box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224); */
-    border-right: none;
+    /* background-color: rgb(237, 237, 237); */
+    height: 10%;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-.search-box .search-icon{
+form{
+    width: 50%;
+    height: 2.7rem;
+    display: flex;
+    box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
+    border: 1px solid rgb(218, 218, 218);
+    padding: 0;
+    /* box-sizing: content-box; */
+    /* border-radius: 3px; */
+}
+
+.search-icon{
+    width: 10%;
+    /* background-color: rgb(224, 224, 224); */
+    border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-right: 1px solid rgb(219, 219, 219);
 }
-
-.search-box svg{
+.search-icon svg{
     height: 1.2rem;
     width: auto;
     fill: #aaa;
 }
 
-.search-box input{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 28rem;
-    height: 3rem;
-    font-size: 1.1rem;
-    color: rgb(77, 95, 108);
-    border: none;
-    background: none;
+#cin{
+    width: 70%;
+    border-radius: 0;
     outline: none;
-    padding: 0 0.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: rgb(135, 135, 135);
+    padding-left: 0.6rem;
 }
 
-.search-box input::placeholder{
-    color: rgb(185, 185, 185);
+#cin::placeholder{
+    color: rgb(216, 216, 216);
 }
 
-#search-submit{
-    font-weight: bold;
-    width: 6rem;
-    color: white;
+#submit{
+    width: 20%;
+    outline: none;
+    border: none;
+    border-radius: 0;
     background-color: #0f9660;
-    outline: none;
-    border: none;
-    border: 1px solid #0f9660;
-    border-left: none;
-    /* box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224); */
+    color: white;
+    font-weight: bold;
 }
 
-#search-submit:active{
-    filter: brightness(1.2);
+#submit:active{
+    filter: brightness(1.1);
 }
 
-@media screen and (orientation:portrait){
-    main{
-        align-items: flex-start;
-    }
-    .search{
-        width: 95vw;
-    }
+.tables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    /* background-color: rgb(255, 183, 183); */
+}
 
-    .search-box input{
-        width: 60vw;
-    }
-    .search-box .search-icon{
-        width: 10vw;
-    }
-    #search-submit{
-        width: 25vw;
-    }
+.info{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 255, 0.3); */
+}
+
+.inscri{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 255, 0.3); */
+}
+
+.logs{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 255, 0.3); */
+}
+
+
+
+
+.info {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    scrollbar-width: thin;
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.info table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.info table td,
+.info table th {
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+.info table thead {
+    background-color: rgb(255, 242, 167);
+    color: black;
+}
+
+.info table tbody {
+    background-color: white;
+}
+
+
+
+.inscri {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    scrollbar-width: thin;
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.inscri table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.inscri table td,
+.inscri table th {
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+.inscri table thead {
+    background-color: rgb(255, 242, 167);
+    color: black;
+}
+
+.inscri table tbody {
+    background-color: white;
+}
+
+
+
+.logs {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    scrollbar-width: thin;
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.logs table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.logs table td,
+.logs table th {
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+.logs table thead {
+    background-color: rgb(255, 242, 167);
+    color: black;
+}
+
+.logs table tbody {
+    background-color: white;
 }
