@@ -51,6 +51,7 @@ function loginAdmin($email, $pass){
 function loginUser($email, $pass){
     $conn = connect();
     $email = trim($email);
+    $email = strtolower($email);
     $pass = trim($pass);
 
     if ($email == "" || $pass == "") {
@@ -87,7 +88,9 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
         $nom = trim($nom);
         $prenom = trim($prenom);
         $cin = trim($cin);
+        $cin = strtoupper($cin);
         $email = trim($email);
+        $email = strtolower($email);
         $numero = trim($numero);
         $etudiant = "Oui";
         if (!isset($etablissement) || empty($etablissement)) {

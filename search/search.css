@@ -1,16 +1,17 @@
-html, body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-main{
+main {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.search{
+.search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +21,8 @@ main{
     margin-bottom: 10px;
 }
 
-form{
-    width: 50%;
+form {
+    width: 32rem;
     height: 2.7rem;
     display: flex;
     box-shadow: 0 0.2rem 3px 0 rgb(224, 224, 224);
@@ -31,7 +32,7 @@ form{
     /* border-radius: 3px; */
 }
 
-.search-icon{
+.search-icon {
     width: 10%;
     /* background-color: rgb(224, 224, 224); */
     border-right: 1px solid lightgray;
@@ -39,13 +40,14 @@ form{
     align-items: center;
     justify-content: center;
 }
-.search-icon svg{
+
+.search-icon svg {
     height: 1.2rem;
     width: auto;
     fill: #aaa;
 }
 
-#cin{
+#cin {
     width: 70%;
     border-radius: 0;
     outline: none;
@@ -56,11 +58,11 @@ form{
     padding-left: 0.6rem;
 }
 
-#cin::placeholder{
+#cin::placeholder {
     color: rgb(216, 216, 216);
 }
 
-#submit{
+#submit {
     width: 20%;
     outline: none;
     border: none;
@@ -70,11 +72,11 @@ form{
     font-weight: bold;
 }
 
-#submit:active{
+#submit:active {
     filter: brightness(1.1);
 }
 
-.tables{
+.tables {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,19 +86,19 @@ form{
     /* background-color: rgb(255, 183, 183); */
 }
 
-.info{
+.info {
     width: 100%;
     height: 30%;
     /* background-color: rgba(0, 0, 255, 0.3); */
 }
 
-.inscri{
+.inscri {
     width: 100%;
     height: 30%;
     /* background-color: rgba(0, 0, 255, 0.3); */
 }
 
-.logs{
+.logs {
     width: 100%;
     height: 30%;
     /* background-color: rgba(0, 0, 255, 0.3); */
@@ -215,4 +217,47 @@ form{
 
 .logs table tbody {
     background-color: white;
+}
+
+@media screen and (orientation: portrait) {
+    form {
+        width: 22rem;
+    }
+
+    #submit {
+        width: 27%;
+        font-size: 0.8rem;
+    }
+
+    #cin {
+        width: 60%;
+    }
+
+    .search-icon {
+        width: 13%;
+    }
+
+    .info {
+        justify-content: flex-start;
+    }
+
+    .info table {
+        width: 100%;
+    }
+
+    .inscri {
+        justify-content: flex-start;
+    }
+
+    .inscri table {
+        width: 100%;
+    }
+
+    .logs {
+        justify-content: flex-start;
+    }
+
+    .logs table {
+        width: 100%;
+    }
 }
