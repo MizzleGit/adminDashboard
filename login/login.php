@@ -1,5 +1,4 @@
 <?php
-require '../config/config.php';
 require '../config/validate.php';
 $conn = connect();
 

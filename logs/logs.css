@@ -11,12 +11,12 @@ main h1{
 }
 
 .logs-table{
+    box-shadow: 0 0 10px 1px rgb(197, 197, 197);
     margin-top: 5rem;
     border-radius: 7px;
     overflow-x: auto;
     overflow-y: auto;
     scrollbar-width: thin;
-    height: 80vh;
 }
 
 .logs-table thead{
@@ -27,7 +27,7 @@ main h1{
 
 .logs-table .table{
     background-color: rgb(253, 253, 253);
-    border: 3px solid rgb(222, 222, 222);
+    /* border: 3px solid rgb(222, 222, 222); */
     border-collapse: collapse;
     width: 100%;
 }
@@ -51,14 +51,14 @@ main h1{
     height: 3.5rem;
 }
 
-.logs-table .table tr td:not(:last-child){
-    border-right: 3px solid rgb(222, 222, 222);
-    border-top: 3px solid rgb(222, 222, 222);
-}
+/* .logs-table .table tr td:not(:last-child){ */
+    /* border-right: 3px solid rgb(222, 222, 222); */
+    /* border-top: 3px solid rgb(222, 222, 222); */
+/* } */
 
-.logs-table .table tr td:last-child{
-    border-top: 3px solid rgb(222, 222, 222);
-}
+/* .logs-table .table tr td:last-child{ */
+    /* border-top: 3px solid rgb(222, 222, 222); */
+/* } */
 
 .Accepté{
     background-color: #0f9660 !important; 

@@ -12,6 +12,8 @@ main h1{
 }
 
 .div-table{
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px rgb(164, 164, 164);
     margin-top: 5rem;
     max-height: 80vh;
     overflow-x: auto;
@@ -22,7 +24,7 @@ main h1{
 }
 
 .div-table table{
-    border: 1px solid rgb(164, 164, 164);
+    /* border: 1px solid rgb(164, 164, 164); */
     border-collapse: collapse;
 }
 

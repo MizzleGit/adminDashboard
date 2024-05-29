@@ -88,11 +88,15 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
         $nom = trim($nom);
         $prenom = trim($prenom);
         $cin = trim($cin);
-        $cin = strtoupper($cin);
         $email = trim($email);
-        $email = strtolower($email);
         $numero = trim($numero);
         $etudiant = "Oui";
+
+        $nom = strtoupper($nom);
+        $prenom = ucfirst($prenom);
+        $email = strtolower($email);
+        $cin = strtoupper($cin);
+
         if (!isset($etablissement) || empty($etablissement)) {
             $etudiant = "Non";
         }
@@ -139,7 +143,6 @@ function signupUser($nom, $prenom, $cin, $email, $numero, $etablissement, $theme
                 return "Le mot de passe n'est pas correcte! Entrez votre ancien mot de passe!";
             }
         }
-
 
         $insertsql = "INSERT INTO inscri (nom, prenom, cin, email, numero, etudiant, etablissement, theme) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 

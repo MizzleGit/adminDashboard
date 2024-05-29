@@ -37,8 +37,9 @@ $numero = $data["numero"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="info.css">
-    <title>Document</title>
+    <title><?php echo @$nom . " " . @$prenom; ?></title>
 </head>
 
 <body>

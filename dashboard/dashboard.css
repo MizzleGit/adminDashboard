@@ -3,7 +3,7 @@ main{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    overflow: none;
+    overflow: hidden;
 }
 
 main h1{
@@ -13,6 +13,7 @@ main h1{
 }
 
 .div-table{
+    box-shadow: 0 0 10px 1px rgb(197, 197, 197);
     margin-top: 5rem;
     max-height: 80vh;
     border-radius: 10px;
@@ -21,12 +22,9 @@ main h1{
     scrollbar-width: thin;
 }
 
-.div-table > table{
-    width: 100%;
-}
-
 .div-table table{
-    border: 1px solid white;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .table thead{
@@ -43,7 +41,11 @@ main h1{
 }
 
 .table tr:nth-of-type(even){
-    background-color: #e2e2e2;
+    background-color: #cfd0d5;
+}
+
+.table tbody tr:last-of-type{
+    background-color: rgb(242, 242, 242);
 }
 
 .table tr{
