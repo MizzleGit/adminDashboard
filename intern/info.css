@@ -93,6 +93,7 @@ main {
 }
 
 .div-info table thead {
+    height: 50%;
     background-color: rgb(255, 242, 167);
     color: black;
 }
@@ -134,6 +135,7 @@ main {
 }
 
 .div-inscri table thead {
+    height: 40%;
     background-color: rgb(167, 229, 255);
     color: black;
 }
@@ -178,6 +180,7 @@ main {
 }
 
 .div-logs table thead {
+    height: 40%;
     background-color: rgb(194, 194, 194);
     color: black;
 }
@@ -195,5 +198,14 @@ main {
 @media screen and (orientation: portrait) {
     header h1 {
         font-size: 1.3rem;
+    }
+    .div-info{
+        justify-content: flex-start;
+    }
+    .div-inscri{
+        justify-content: flex-start;
+    }
+    .div-logs{
+        justify-content: flex-start;
     }
 }

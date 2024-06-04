@@ -108,20 +108,21 @@ form {
 
 
 .info {
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px rgb(197, 197, 197);
     display: flex;
     justify-content: center;
     overflow: auto;
     scrollbar-width: thin;
-    width: 100%;
+    width: 80%;
     height: 30%;
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .info table {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    border: 1px solid black;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -130,12 +131,12 @@ form {
 
 .info table td,
 .info table th {
-    border: 1px solid black;
     padding: 0 1rem;
 }
 
 .info table thead {
-    background-color: rgb(255, 242, 167);
+    height: 50%;
+    background-color: #3388ff;
     color: black;
 }
 
@@ -146,20 +147,21 @@ form {
 
 
 .inscri {
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px rgb(197, 197, 197);
     display: flex;
     justify-content: center;
     overflow: auto;
     scrollbar-width: thin;
-    width: 100%;
+    width: 80%;
     height: 30%;
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .inscri table {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    border: 1px solid black;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -168,12 +170,12 @@ form {
 
 .inscri table td,
 .inscri table th {
-    border: 1px solid black;
     padding: 0 1rem;
 }
 
 .inscri table thead {
-    background-color: rgb(255, 242, 167);
+    height: 40%;
+    background-color: #2fbb42;
     color: black;
 }
 
@@ -184,20 +186,21 @@ form {
 
 
 .logs {
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px rgb(197, 197, 197);
     display: flex;
     justify-content: center;
     overflow: auto;
     scrollbar-width: thin;
-    width: 100%;
+    width: 80%;
     height: 30%;
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .logs table {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    border: 1px solid black;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -206,11 +209,11 @@ form {
 
 .logs table td,
 .logs table th {
-    border: 1px solid black;
     padding: 0 1rem;
 }
 
 .logs table thead {
+    height: 40%;
     background-color: rgb(255, 242, 167);
     color: black;
 }
