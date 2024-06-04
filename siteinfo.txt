@@ -1,27 +1,13 @@
 // Site
 url: https://cristage.000webhostapp.com/
+mdp: Nazih-Abdelhak-2024
 
 // DB
 url: https://databases.000webhost.com/
 name: id22102457_root
+mdp: Nazih-Abdelhak-2024
 
+// Local
 
-// Random additions
-
-
-INSERT INTO inscri (nom, prenom, cin, email, numero, etudiant, etablissement, theme) VALUES
-('last','ahmed','SD062001','ahmed@mail.com', '+21265511542211', 'Non', 'Ecole superieure de Technologie Laayoune' , 'Analyse de données et visualisation'),
-('postnom', 'mohammed', 'BD019002', 'mohammed@mail.com', '+21265511542211', 'Oui', 'Ecole superieure de Technologie Rabat' , 'Développement d\'applications mobiles'),
-('nom', 'youssef', 'DD019303', 'youssef@mail.com', '+21265511542211', 'Oui', 'Ecole National Superieure de l\'Arts et Metiers' , 'Étude de marché et marketing digital'),
-('lastlast', 'salah', 'SM094624', 'salah@mail.com', '+21265511542211', 'Oui', 'OFPPT' , 'Systèmes d\'information géographique'),
-('lastname', 'ilyas', 'KJ194105', 'ilyas@mail.com', '+21265511542211', 'Non', 'CMC' , 'Analyse de données et visualisation'),
-('tad','ahmed','SD999999','ahmed@mail.com', '+21265511542211', 'Oui', 'Faculte de Sciences et techniques Settat' , 'Développement d\'applications mobiles'),
-('nad', 'mohammed', 'BD999998', 'mohammed@mail.com', '+21265511542211', 'Oui', 'Ecole superieure de Technologie Agadir' , 'Étude de marché et marketing digital'),
-('fad', 'youssef', 'DD999997', 'youssef@mail.com', '+21265511542211', 'Oui', 'OFPPT' , 'Systèmes d\'information géographique'),
-('bad', 'salah', 'SM999996', 'salah@mail.com', '+21265511542211', 'Oui', 'Ecole Superieure de l\'Artes Casablanca' , 'Analyse de données et visualisation'),
-('kad', 'ilyas', 'KJ999995', 'ilyas@mail.com', '+21265511542211', 'Non', 'Ecole superieure de Technologie Laayoune' , 'Étude de marché et marketing digital'),
-('dodo','ahmed','SD123456','ahmed@mail.com', '+21265511542211', 'Oui', 'OFPPT' , 'Développement d\'applications mobiles'),
-('mohammed', 'mohammed', 'BD000001', 'mohammed@mail.com', '+21265511542211', 'Oui', 'Ecole National Superieure de l\'Arts et Metiers' , 'Systèmes d\'information géographique'),
-('asdf', 'youssef', 'DD000002', 'youssef@mail.com', '+21265511542211', 'Oui', 'CMC' , 'Analyse de données et visualisation'),
-('lastty', 'salah', 'SM000003', 'salah@mail.com', '+21265511542211', 'Oui', 'INSIAS' , 'Développement d\'applications mobiles'),
-('miz', 'ilyas', 'KJ000004', 'ilyas@mail.com', '+21265511542211', 'Oui', 'Ecole superieure de Technologie Laayoune' , 'Étude de marché et marketing digital');
+admin: admin@cri.com
+mdp: mdp
